@@ -1,17 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[21]:
-
-
 from datetime import datetime
 import json
 import requests
 import time
-
-
-# In[22]:
-
 
 def askUserAge():
     print("Enter User's Age: ", end = '')
@@ -56,9 +49,6 @@ def getDesiredDoseKey():
         return 'available_capacity_dose1'
     else:
         return 'available_capacity_dose2'
-
-
-# In[23]:
 
 
 def askSearchType():
@@ -116,9 +106,6 @@ def getCalendarURL():
         return calendarURL
 
 
-# In[24]:
-
-
 def askUserChoices():
     userChoices = {}
     userChoices['userAge'] = askUserAge()
@@ -129,7 +116,6 @@ def askUserChoices():
     return userChoices
 
 
-# In[25]:
 
 
 def getVaccinationCalendar(calendarURL):
@@ -140,8 +126,6 @@ def getVaccinationCalendar(calendarURL):
     else:
         print('ERROR IN VACCINATION CALENDAR RESPONSE!!!')
 
-
-# In[26]:
 
 
 def checkFeeType(centerFeeType, desiredFeeType):
@@ -175,7 +159,6 @@ def checkDesiredDose(availabeDoseCount):
         return False
 
 
-# In[27]:
 
 
 def searchVaccine(vaccinationCalendar, userChoices):
@@ -210,13 +193,11 @@ def searchVaccine(vaccinationCalendar, userChoices):
         return False
 
 
-# In[28]:
 
 
 userChoices = askUserChoices()
 
 
-# In[ ]:
 
 
 vaccineNotFound = True
@@ -232,7 +213,6 @@ while vaccineNotFound:
     time.sleep(3)
 
 
-# In[ ]:
 
 
 
